@@ -40445,3 +40445,82 @@ Not Found: /Alice/img/you.jpg
 [pid: 81006|app: 0|req: 3/25] 5.78.55.132 () {52 vars in 790 bytes} [Thu Nov  9 01:18:00 2023] GET /Alice/img/you.jpg => generated 2397 bytes in 7 msecs (HTTP/1.1 404) 7 headers in 288 bytes (1 switches on core 0)
 [pid: 81007|app: 0|req: 1/26] 5.78.55.132 () {60 vars in 950 bytes} [Thu Nov  9 01:18:00 2023] POST / => generated 2918 bytes in 15933 msecs (HTTP/1.1 200) 7 headers in 273 bytes (1 switches on core 0)
 announcing my loyalty to the Emperor...
+[pid: 81013|app: 0|req: 8/27] 5.78.55.132 () {54 vars in 838 bytes} [Thu Nov  9 01:23:44 2023] GET / => generated 7485 bytes in 22 msecs (HTTP/1.1 200) 9 headers in 439 bytes (1 switches on core 0)
+Not Found: /pagead2.googlesyndication.com/pagead/js/fbe56.txt
+[pid: 81013|app: 0|req: 9/28] 5.78.55.132 () {52 vars in 891 bytes} [Thu Nov  9 01:23:44 2023] GET /pagead2.googlesyndication.com/pagead/js/fbe56.txt?client=ca-pub-2586248939932785 => generated 2524 bytes in 15 msecs (HTTP/1.1 404) 7 headers in 288 bytes (1 switches on core 0)
+Not Found: /Alice/img/you.jpg
+[pid: 81008|app: 0|req: 5/29] 5.78.55.132 () {52 vars in 790 bytes} [Thu Nov  9 01:23:49 2023] GET /Alice/img/you.jpg => generated 2397 bytes in 8 msecs (HTTP/1.1 404) 7 headers in 288 bytes (1 switches on core 0)
+[pid: 81014|app: 0|req: 3/30] 5.78.55.132 () {60 vars in 948 bytes} [Thu Nov  9 01:23:49 2023] POST / => generated 48 bytes in 1156 msecs (HTTP/1.1 200) 7 headers in 271 bytes (1 switches on core 0)
+[pid: 81013|app: 0|req: 10/31] 5.78.55.132 () {52 vars in 819 bytes} [Thu Nov  9 01:27:34 2023] GET / => generated 7485 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 439 bytes (1 switches on core 0)
+Not Found: /pagead2.googlesyndication.com/pagead/js/fbe56.txt
+[pid: 81006|app: 0|req: 4/32] 5.78.55.132 () {52 vars in 891 bytes} [Thu Nov  9 01:27:36 2023] GET /pagead2.googlesyndication.com/pagead/js/fbe56.txt?client=ca-pub-2586248939932785 => generated 2524 bytes in 14 msecs (HTTP/1.1 404) 7 headers in 288 bytes (2 switches on core 0)
+Not Found: /pagead2.googlesyndication.com/pagead/js/fbe56.txt
+[pid: 81008|app: 0|req: 6/33] 5.78.55.132 () {52 vars in 891 bytes} [Thu Nov  9 01:27:37 2023] GET /pagead2.googlesyndication.com/pagead/js/fbe56.txt?client=ca-pub-2586248939932785 => generated 2524 bytes in 9 msecs (HTTP/1.1 404) 7 headers in 288 bytes (1 switches on core 0)
+[pid: 81013|app: 0|req: 11/34] 5.78.55.132 () {60 vars in 948 bytes} [Thu Nov  9 01:27:40 2023] POST / => generated 48 bytes in 1151 msecs (HTTP/1.1 200) 7 headers in 271 bytes (1 switches on core 0)
+Thu Nov  9 01:36:50 2023 - received message 0 from emperor
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/cutlass/Alice-ai/Cs50-challange/cs50x.sock removed.
+*** Starting uWSGI 2.0.23 (64bit) on [Thu Nov  9 01:38:25 2023] ***
+compiled with version: 11.4.0 on 02 November 2023 17:13:14
+os: Linux-5.15.0-88-generic #98-Ubuntu SMP Mon Oct 2 15:23:16 UTC 2023
+nodename: django-ai-service
+machine: aarch64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/cutlass/Alice-ai/env/aai/vassals
+detected binary path: /home/cutlass/Alice-ai/env/aai/bin/uwsgi
+chdir() to /home/cutlass/Alice-ai/Cs50-challange/
+your processes number limit is 14693
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/cutlass/Alice-ai/Cs50-challange/cs50x.sock fd 3
+Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/cutlass/Alice-ai/env/aai/
+Set PythonHome to /home/cutlass/Alice-ai/env/aai/
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xaaaaf4936b90
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 801944 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaaaf4936b90 pid: 83016 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 83016)
+spawned uWSGI worker 1 (pid: 83017, cores: 1)
+spawned uWSGI worker 2 (pid: 83018, cores: 1)
+spawned uWSGI worker 3 (pid: 83019, cores: 1)
+spawned uWSGI worker 4 (pid: 83020, cores: 1)
+spawned uWSGI worker 5 (pid: 83021, cores: 1)
+spawned uWSGI worker 6 (pid: 83022, cores: 1)
+spawned uWSGI worker 7 (pid: 83023, cores: 1)
+spawned uWSGI worker 8 (pid: 83024, cores: 1)
+spawned uWSGI worker 9 (pid: 83025, cores: 1)
+spawned uWSGI worker 10 (pid: 83026, cores: 1)
+[pid: 83017|app: 0|req: 1/1] 5.78.55.132 () {54 vars in 838 bytes} [Thu Nov  9 01:38:36 2023] GET / => generated 7485 bytes in 305 msecs (HTTP/1.1 200) 9 headers in 439 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+Not Found: /pagead2.googlesyndication.com/pagead/js/fbe56.txt
+[pid: 83019|app: 0|req: 1/2] 5.78.55.132 () {52 vars in 891 bytes} [Thu Nov  9 01:38:36 2023] GET /pagead2.googlesyndication.com/pagead/js/fbe56.txt?client=ca-pub-2586248939932785 => generated 2524 bytes in 259 msecs (HTTP/1.1 404) 7 headers in 288 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+Not Found: /Alice/img/you.jpg
+[pid: 83026|app: 0|req: 1/3] 5.78.55.132 () {52 vars in 790 bytes} [Thu Nov  9 01:38:42 2023] GET /Alice/img/you.jpg => generated 2397 bytes in 292 msecs (HTTP/1.1 404) 7 headers in 288 bytes (2 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 83025|app: 0|req: 1/4] 5.78.55.132 () {60 vars in 948 bytes} [Thu Nov  9 01:38:42 2023] POST / => generated 48 bytes in 1041 msecs (HTTP/1.1 200) 7 headers in 271 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+Not Found: /autodiscover/autodiscover.json
+[pid: 83020|app: 0|req: 1/5] 162.243.132.49 () {36 vars in 493 bytes} [Thu Nov  9 01:38:58 2023] GET /autodiscover/autodiscover.json?@zdi/Powershell => generated 2453 bytes in 347 msecs (HTTP/1.1 404) 7 headers in 288 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 83019|app: 0|req: 2/6] 45.43.33.218 () {38 vars in 551 bytes} [Thu Nov  9 01:46:58 2023] GET / => generated 7485 bytes in 14 msecs (HTTP/1.1 200) 9 headers in 439 bytes (1 switches on core 0)
