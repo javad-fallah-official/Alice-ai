@@ -1,8 +1,7 @@
 from pathlib import Path
 import os
-import json
-#from dotenv import load_dotenv
-#load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,12 +11,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9o0xunz19zi+u-3f)(_kqrw)ciayltgwftkj@h)&2=(!9ss7me'
+
+SECRET_KEY = os.getenv('SECRET_KEY') 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ai.n-or-th.ir', 'n-or-th.ir', 'www.n-or-th.ir']
+ALLOWED_HOSTS = ['49.13.23.40','n-or-th.ir', 'www.n-or-th.ir']
 
 
 # Application definition
@@ -29,10 +29,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'userservices.apps.UserservicesConfig',
-    #'canvas',
+    'userservices.apps.UserservicesConfig',
+    'canvas',
     #'profiles',
-    #'Alice',
+    'Alice',
 ]
 
 MIDDLEWARE = [
@@ -47,9 +47,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'cs50x.urls'
 
-#LOGIN_REDIRECT_URL = '/userservices/profile/me'
+LOGIN_REDIRECT_URL = '/userservices/profile/me'
 
-#AUTH_USER_MODEL = "userservices.CustomUser"
+AUTH_USER_MODEL = "userservices.CustomUser"
 
 TEMPLATES = [
     {
@@ -116,13 +116,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATICFILES_DIRS = [
-
-        os.path.join(BASE_DIR, 'templates/assets')
+    os.path.join(BASE_DIR, 'templates/')    
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 STATIC_URL = '/static/'
+
+#HTTPS settings
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+
+#HSTS settings
+SECURE_HSTS_SECONDS = 31536000 # 1 year
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -131,5 +140,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DATE_INPUT_FORMATS = ['%d/%m/%Y']
 
-#OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
+OUTPUT_PATH = '/home/cutlass/Alice-ai/'
